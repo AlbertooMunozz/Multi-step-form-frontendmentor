@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu";
+}
+
+:root {
+  --Marine-blue: hsl(213, 96%, 18%);
+  --Purplish-blue: hsl(243, 100%, 62%);
+  --Pastel-blue: hsl(228, 100%, 84%);
+  --Light-blue: hsl(206, 94%, 87%);
+  --Strawberry-red: hsl(354, 84%, 57%);
+  --Cool-gray: hsl(231, 11%, 63%);
+  --Light-gray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%);
+  --paragraph-size: 16px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Magnolia);
+  padding: 0 0.6rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 31% 1fr;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+  width: 925px;
+  min-height: 600px;
+  padding: 0.92rem 0.8rem 0.96rem 0.8rem;
+  border-radius: 15.2px;
+  background-color: var(--White);
+  box-shadow: 11px 4px 12px -6px rgba(0, 0, 0, 0.1);
+}
+
+.container-aside-section {
+  display: flex;
+  justify-content: center;
+  background-image: url("../assets/images/bg-sidebar-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  padding: 2.5rem 1.5rem;
+}
+.container-aside-section aside {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.4rem;
+  width: 100%;
+}
+.container-aside-section aside .aside-section {
+  display: flex;
+  gap: 0.6rem;
+}
+.container-aside-section aside .aside-section .section-index button {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  border: solid 1px white;
+  outline: transparent;
+  transition: 0.3s background-color ease-in-out;
+}
+.container-aside-section aside .aside-section .section-info h4 {
+  font-size: 0.85rem;
+  font-weight: lighter;
+  color: var(--Cool-gray);
+}
+.container-aside-section aside .aside-section .section-info p {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.03rem;
+  color: var(--White);
+}
+
+.container-steps-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.3rem 4.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.container-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.8rem;
+  width: 100%;
+  height: 100%;
+}
+
+.header-step {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+.header-step h1 {
+  font-size: 1.5rem;
+  color: var(--Marine-blue);
+}
+.header-step p {
+  font-size: 16px;
+  color: var(--Cool-gray);
+}
+
+.navigate-step {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.navigate-step button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: bold;
+  letter-spacing: 0.08rem;
+  color: var(--White);
+  background-color: var(--Marine-blue);
+  border-radius: 10px;
+  border: transparent;
+  outline: transparent;
+  padding: 0.75rem 1rem;
+  transition: 0.3s ease-in-out background-color;
+  cursor: pointer;
+}
+.navigate-step button:hover {
+  background-color: var(--Pastel-blue);
+}
+.navigate-step .previous-step button {
+  background-color: transparent;
+  color: var(--Cool-gray);
+}
+
+.stepOne form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 100%;
+}
+.stepOne form .title-input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.1rem;
+}
+.stepOne form .title-input .error-input {
+  font-size: 0.82rem;
+  color: var(--Strawberry-red);
+}
+.stepOne form input {
+  width: 100%;
+  padding: 0.72rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  border-radius: 0.6rem;
+  border: solid 1px var(--Cool-gray);
+  outline: transparent;
+  transition: 0.3s ease-in border;
+}
+.stepOne form input:hover {
+  border: solid 1px var(--Pastel-blue);
+}
+.stepOne form input:focus {
+  border: solid 1px var(--Purplish-blue);
+}
+
+.stepTwo .selects-plan {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  width: 100%;
+}
+.stepTwo .selects-plan .plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 1.5rem;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0.9rem;
+  border: solid 1px var(--Cool-gray);
+  border-radius: 0.7rem;
+  transition: 0.3s ease-in background-color;
+  cursor: pointer;
+}
+.stepTwo .selects-plan .plan:hover {
+  background-color: var(--Magnolia);
+}
+.stepTwo .selects-plan .plan .info-type {
+  font-weight: bold;
+  color: var(--Marine-blue);
+  margin-bottom: 0.3rem;
+}
+.stepTwo .selects-plan .plan .info-price {
+  font-weight: lighter;
+  color: var(--Cool-gray);
+}
+.stepTwo .selects-plan .plan .info-free {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--Marine-blue);
+  margin-top: 0.8rem;
+}
+.stepTwo .section-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  background-color: var(--Alabaster);
+  padding: 0.3rem;
+  border-radius: 0.8rem;
+}
+.stepTwo .section-switch .switch {
+  position: relative;
+  width: 50px;
+  height: 29px;
+  border-radius: 3rem;
+  background-color: var(--Marine-blue);
+  cursor: pointer;
+}
+.stepTwo .section-switch .switch .switch-control {
+  position: absolute;
+  left: 5px;
+  top: 10%;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.3s transform;
+}
+
+.selected {
+  background-color: var(--Magnolia);
+}
+
+.yearly {
+  background-color: white;
+  transform: translatex(75%);
+}
+
+.stepThree form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+.stepThree form input {
+  cursor: pointer;
+}
+.stepThree form .select-addOn {
+  display: grid;
+  grid-template-columns: 10% 1fr 18%;
+  align-items: center;
+  padding: 0.8rem;
+  border: solid 1px var(--Light-gray);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+.stepThree form .select-addOn .addOn-info h3 {
+  font-weight: 800;
+  color: var(--Marine-blue);
+}
+.stepThree form .select-addOn .addOn-info p {
+  color: var(--Cool-gray);
+  font-size: 0.89rem;
+}
+.stepThree form .select-addOn .addOn-price {
+  color: var(--Purplish-blue);
+}
+.stepThree form .select-addOn:hover {
+  background-color: var(--Magnolia);
+}
+.stepThree form .select-addOn:has(:checked) {
+  background-color: var(--Magnolia);
+  border: solid 1px var(--Purplish-blue);
+}
+
+.stepFour .section-summary .summary-count {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 0.8rem;
+  background-color: var(--Magnolia);
+}
+.stepFour .section-summary .summary-count .summary-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stepFour .section-summary .summary-count .summary-plan .plan .plan-selected {
+  font-size: 0.97rem;
+  font-weight: bold;
+  color: var(--Marine-blue);
+}
+.stepFour .section-summary .summary-count .summary-plan .plan .change {
+  font-weight: lighter;
+  color: var(--Purplish-blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.stepFour .section-summary .summary-count i {
+  display: block;
+  width: 95%;
+  height: 1px;
+  background-color: var(--Cool-gray);
+}
+.stepFour .section-summary .summary-addOns {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.stepFour .section-summary .summary-addOns .addOn-pick {
+  display: flex;
+  justify-content: space-between;
+}
+.stepFour .section-summary .summary-addOns .addOn-pick p {
+  font-size: 0.9rem;
+  color: var(--Cool-gray);
+}
+.stepFour .section-summary .summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+.stepFour .section-summary .summary-total .total-title {
+  color: var(--Cool-gray);
+}
+.stepFour .section-summary .summary-total .total {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--Purplish-blue);
+}
+.stepFour .section-summary .not-add {
+  margin: auto;
+  color: var(--Cool-gray);
+}
+.stepFour .confirm button {
+  background-color: var(--Purplish-blue);
+}
+
+.stepFive {
+  justify-content: center;
+  align-items: center;
+}
+.stepFive .finish-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--Marine-blue);
+}
+.stepFive .finish-description p {
+  text-align: center;
+}
+
+@media screen and (max-width: 736px) {
+  main {
+    display: block;
+    padding: 0;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+    background-color: var(--Magnolia);
+  }
+  .container-aside-section {
+    height: 150px;
+    padding: 2rem 0;
+    border-radius: 0;
+    background-image: url("../assets/images/bg-sidebar-mobile.svg");
+  }
+  .container-aside-section aside {
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 1.2rem;
+  }
+  .container-aside-section aside .section-info {
+    display: none;
+  }
+  .navigate-step {
+    padding: 16px;
+  }
+  .container-steps-section {
+    padding: 0;
+    background-color: var(--Magnolia);
+  }
+  .container-step {
+    width: 90%;
+    height: 490px;
+    margin-top: -70px;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 11px 4px 12px -6px rgba(0, 0, 0, 0.1);
+    background-color: var(--White);
+  }
+}
+@media screen and (max-width: 382px) {
+  .stepTwo .selects-plan {
+    grid-template-columns: repeat(3, 30%);
+  }
+  .stepTwo .selects-plan .plan {
+    padding: 0.3rem;
+  }
+  .stepTwo .selects-plan .plan .info-type {
+    font-size: 0.78rem;
+  }
+  .stepTwo .selects-plan .plan .info-price {
+    font-size: 0.78rem;
+  }
+  .stepTwo .selects-plan .plan .info-free {
+    font-size: 0.59rem;
+  }
+  .stepThree form .select-addOn {
+    padding: 0.5rem;
+  }
+  .stepThree form .select-addOn .addOn-info h3 {
+    font-size: 0.85rem;
+  }
+  .stepThree form .select-addOn .addOn-info p {
+    font-size: 0.78rem;
+  }
+  .stepThree form .select-addOn .addOn-price {
+    font-size: 0.75rem;
+  }
+  .finish-title {
+    font-size: 1.4rem;
+  }
+  .finish-description p {
+    font-size: 0.89rem;
+  }
+}/*# sourceMappingURL=Style.css.map */
